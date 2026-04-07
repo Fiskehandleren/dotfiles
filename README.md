@@ -9,6 +9,7 @@ My dotfiles, managed with [GNU Stow](https://www.gnu.org/software/stow/).
 | `aerospace` | `.aerospace.toml` (tiling window manager) |
 | `nvim` | `.config/nvim/` (NvChad v2.5, catppuccin theme, LSPs, DAP, conform) |
 | `ghostty` | `.config/ghostty/` (Ghostty terminal, catppuccin theme, visual config variants) |
+| `tmux` | `.config/tmux/tmux.conf` (tmux with tpm, catppuccin, vim-tmux-navigator) |
 
 ## Prerequisites
 
