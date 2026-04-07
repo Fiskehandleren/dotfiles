@@ -8,6 +8,7 @@ My dotfiles, managed with [GNU Stow](https://www.gnu.org/software/stow/).
 |---------|----------|
 | `aerospace` | `.aerospace.toml` (tiling window manager) |
 | `nvim` | `.config/nvim/` (NvChad v2.5, catppuccin theme, LSPs, DAP, conform) |
+| `ghostty` | `.config/ghostty/` (Ghostty terminal, catppuccin theme, visual config variants) |
 
 ## Prerequisites
 
@@ -26,6 +27,7 @@ Clone this repo and run `stow` from within it to symlink packages into your home
 # Or install individual packages
 stow aerospace
 stow nvim
+stow ghostty
 
 # Remove a package
 stow -D aerospace

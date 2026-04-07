@@ -1,0 +1,5 @@
+config-file = visual_config
+config-file = keybindings
+
+confirm-close-surface = false
+keybind = shift+enter=text:\n
