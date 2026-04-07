@@ -6,7 +6,7 @@ if ! command -v stow &> /dev/null; then
     brew install stow
 fi
 
-PACKAGES=(aerospace nvim ghostty)
+PACKAGES=(aerospace nvim ghostty tmux)
 
 for pkg in "${PACKAGES[@]}"; do
     echo "Stowing $pkg..."
