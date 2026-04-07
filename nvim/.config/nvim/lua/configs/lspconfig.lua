@@ -1,16 +1,25 @@
-vim.lsp.config("ts_ls", {})
-vim.lsp.enable "ts_ls"
+require("nvchad.configs.lspconfig").defaults()
 
-vim.lsp.config("ruff", {
-  init_options = {
-    settings = {
-      args = {},
+vim.lsp.config("ty", {
+  settings = {
+    ty = {
+      configuration = {
+        rules = {
+          ["unresolved-reference"] = "warn",
+        },
+      },
+      inlayHints = {
+        variableTypes = true,
+        callArgumentNames = true,
+        returnTypes = true,
+      },
     },
   },
 })
-vim.lsp.enable "ruff"
 
--- ty: Astral's type checker (replaces pyright + mypy)
--- Install: uv tool install ty@latest
-vim.lsp.config("ty", {})
-vim.lsp.enable "ty"
+vim.lsp.inlay_hint.enable(true)
+
+local servers = { "html", "cssls", "ruff", "ty", "ts_ls" }
+vim.lsp.enable(servers)
+
+-- read :h vim.lsp.config for changing options of lsp servers

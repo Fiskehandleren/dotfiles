@@ -1,7 +1,10 @@
 require "nvchad.options"
 
--- add yours here!
+local o = vim.o
 
--- local o = vim.o
--- o.cursorlineopt ='both' -- to enable cursorline!
-vim.o.relativenumber = true
+-- Relative line numbers
+o.relativenumber = true
+o.number = true
+
+-- Keep 10 lines visible above/below cursor
+o.scrolloff = 10
