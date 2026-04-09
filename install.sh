@@ -10,7 +10,7 @@ PACKAGES=(aerospace nvim ghostty tmux)
 
 for pkg in "${PACKAGES[@]}"; do
     echo "Stowing $pkg..."
-    stow "$pkg"
+    stow -t ~ "$pkg"
 done
 
 echo "Done! All packages stowed."
