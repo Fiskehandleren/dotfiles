@@ -1,8 +1,30 @@
 return {
   {
+    "nvim-tree/nvim-tree.lua",
+    opts = {
+      filters = {
+        dotfiles = false,
+        git_ignored = false,
+        custom = {},
+      },
+    },
+  },
+
+  {
     "stevearc/conform.nvim",
     event = 'BufWritePre',
     opts = require "configs.conform",
+  },
+
+  -- NvChad sets PATH = "skip" and lazy-loads mason, so nothing it installs
+  -- (LSP servers, tree-sitter CLI, formatters) is found. Load it at startup
+  -- and put its bin dir on PATH.
+  {
+    "mason-org/mason.nvim",
+    lazy = false,
+    opts = {
+      PATH = "prepend",
+    },
   },
 
   -- These are some examples, uncomment them if you want to see them work!
@@ -26,15 +48,15 @@ return {
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+  	"nvim-treesitter/nvim-treesitter",
+  	opts = {
+  		ensure_installed = {
+  			"vim", "lua", "vimdoc",
+       "html", "css", "python"
+  		},
+  	},
+  },
 
   {
     "karb94/neoscroll.nvim",
@@ -87,6 +109,20 @@ return {
         },
       })
     end,
+  },
+
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    opts = {},
+  },
+
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    ft = { "markdown", "codecompanion" },
+    opts = {},
   },
 
   {

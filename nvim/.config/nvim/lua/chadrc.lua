@@ -15,6 +15,20 @@ M.base46 = {
 	-- },
 }
 
+M.mason = {
+  pkgs = {
+    "rust-analyzer",
+    "pyright",
+    "ruff",
+    "mypy",
+    "debugpy",
+    "lua-language-server",
+    "delve",
+    "ty",
+    "pyrefly",
+  }
+}
+
 -- M.nvdash = { load_on_startup = true }
 -- M.ui = {
 --       tabufline = {
