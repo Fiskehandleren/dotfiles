@@ -2,4 +2,5 @@ config-file = visual_config
 config-file = keybindings
 
 confirm-close-surface = false
-keybind = shift+enter=text:\n
+keybind = shift+enter=text:\x1b\r
+keybind = super+enter=text:\x1b\r
