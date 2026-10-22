@@ -1,6 +1,16 @@
 # Place a copy of this config to ~/.aerospace.toml
 # After that, you can edit ~/.aerospace.toml to your liking
 
+# See: https://nikitabobko.github.io/AeroSpace/guide#config-version
+config-version = 2
+
+# Workspaces that are kept alive even when empty.
+# Mirrors the workspaces bound below (config-version 1 inferred this list from the bindings)
+persistent-workspaces = [
+    '1', '2', '3', '4', '5', '6',
+    'A', 'B', 'C', 'D', 'E', 'G', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+]
+
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = []
@@ -195,7 +205,7 @@ automatically-unhide-macos-hidden-apps = false
     run = ['layout tiling','move-node-to-workspace C']
 
 [[on-window-detected]]
-    if.app-id = 'company.thebrowser.Browser'
+    if.app-id = 'com.google.Chrome'
     run = ['layout tiling','move-node-to-workspace B']
 
 [[on-window-detected]]

@@ -7,7 +7,9 @@ local options = {
   },
 
   format_on_save = {
-    timeout_ms = 500,
+    -- One budget shared by every formatter in the chain (three ruff calls for
+    -- Python), and it also absorbs the event loop being busy with LSP traffic.
+    timeout_ms = 2000,
     lsp_fallback = true,
   },
 }
