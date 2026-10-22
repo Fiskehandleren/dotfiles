@@ -9,10 +9,12 @@ M.base46 = {
 	theme = "catppuccin",
   transparency = true,
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+	-- base46 uses grey_fg (#4e4d5d) for comments, which disappears against a
+	-- transparent background. #7f849c is Catppuccin Mocha's overlay1.
+	hl_override = {
+		Comment = { fg = "#7f849c" },
+		["@comment"] = { fg = "#7f849c" },
+	},
 }
 
 M.mason = {
@@ -26,6 +28,8 @@ M.mason = {
     "delve",
     "ty",
     "pyrefly",
+    -- nvim-treesitter (main) compiles parsers with the tree-sitter CLI
+    "tree-sitter-cli",
   }
 }
 
